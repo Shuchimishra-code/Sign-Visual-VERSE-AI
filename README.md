@@ -1,10 +1,10 @@
-# SIGNVERSE AI 🤟
+# SIGNVERSE AI 
 > **Breaking Communication Barriers Through Artificial Intelligence**
 > *A Real-Time Sign Language Recognition & Translation Assistant Platform*
 
 ---
 
-## 🌟 Project Vision
+##  Project Vision
 
 **SIGNVERSE AI** is a production-grade, assistive technology platform designed to bridge the communication gap between the deaf/mute community and the hearing world. Using computer vision, PyTorch deep learning, and advanced signal processing, SIGNVERSE AI captures web-camera video feeds, extracts hand skeleton landmarks, and translates sign gestures into:
 * **Synthesized Text** (with grammar correction)
@@ -50,7 +50,7 @@ graph TD
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 SIGNVERSE_AI/
@@ -98,7 +98,7 @@ SIGNVERSE_AI/
 
 ---
 
-## ⚡ Quick Start
+##  Quick Start
 
 ### 1. Installation
 Clone this repository and install the dependencies in a virtual environment:
@@ -153,7 +153,7 @@ python main.py webcam
 
 ---
 
-## 🧠 Deep Learning & Vision Pipeline
+##  Deep Learning & Vision Pipeline
 
 ### 1. Hand Landmark Extraction & Normalization
 Standard MediaPipe coordinate structures vary depending on how far the user's hand is from the lens. We resolve this by applying two geometric normalizations:
@@ -171,7 +171,7 @@ We utilize a 1D Convolutional Neural Network in PyTorch. The 126 coordinate elem
 
 ---
 
-## 🎙️ Speech & Translation Hub
+##  Speech & Translation Hub
 
 * **Prediction Smoothing:** The raw neural network updates frames at 30 FPS. To filter out noise, a **Sliding Window Mode-Voting Engine** requires a gesture to represent at least **60%** of the last 12 frames, with an average confidence of **70%**, before stabilizing.
 * **Debouncing Hand Absence:** To prevent duplicate prints (e.g. printing "HELLO HELLO HELLO"), the system locks the word until the hand is removed from the screen (no hand detected for 12 consecutive frames) or a new hand gesture is made.
@@ -180,7 +180,7 @@ We utilize a 1D Convolutional Neural Network in PyTorch. The 126 coordinate elem
 
 ---
 
-## 🚨 Emergency SOS Mode
+##  Emergency SOS Mode
 
 Designed specifically for clinical and hospital environments, SIGNVERSE AI implements a high-priority emergency handler:
 1. When gestures like `HELP`, `EMERGENCY`, `PAIN`, `AMBULANCE`, or `DOCTOR` are detected, the system triggers the SOS protocol.
@@ -190,7 +190,7 @@ Designed specifically for clinical and hospital environments, SIGNVERSE AI imple
 
 ---
 
-## 📊 SQLite Schema Details
+##  SQLite Schema Details
 
 The persistent database `database/signverse.db` handles the following tables:
 * `users`: Stores user profile names, default target translation language, voice settings, and styling choices.
@@ -200,7 +200,7 @@ The persistent database `database/signverse.db` handles the following tables:
 
 ---
 
-## 🐳 Docker Deployment
+##  Docker Deployment
 
 To package the application for cloud hosting (AWS, Streamlit Cloud, Azure) or local sandbox execution, build and run the Docker image:
 
